@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Skill runtime artifacts (per-workspace, never committed)
+.auth/
+.env
+*.log
+
+# Test output / scratch
+/tmp/
+scratch/

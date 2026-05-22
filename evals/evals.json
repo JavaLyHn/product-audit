@@ -1,0 +1,52 @@
+{
+  "skill_name": "product-audit",
+  "description": "Test cases for the product-audit skill. Each test case is a realistic user prompt that should trigger the skill. Outputs are evaluated qualitatively (report quality, structure adherence) and quantitatively (structure presence, screenshot count, finding count, §6 completeness).",
+  "evals": [
+    {
+      "id": 1,
+      "name": "saas-express-default",
+      "prompt": "帮我用 express 档位快速测评 https://linear.app，给我一份简短报告",
+      "expected_behavior": [
+        "Skill picks saas template (default)",
+        "Skill picks express depth tier",
+        "Report saved to /Users/aa00945/Desktop/octok/audits/linear-app-<timestamp>/",
+        "Report contains §0 Executive Summary, §3 体验流程记录, §4 问题清单, §6 横向对标, §7 总结",
+        "Should have 8-12 screenshots minimum",
+        "§6 横向对标 should be present (auto-suggested competitors like Asana / Jira)",
+        "Report length: 1500-3000 words"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "multi-agent-standard-with-competitors",
+      "prompt": "评测一个多 Agent 产品 https://lindy.ai，标准深度，竞品对比 manus.im 和 coze.cn，中文报告",
+      "expected_behavior": [
+        "Skill picks multi-agent template",
+        "Skill picks standard depth tier",
+        "Report in Chinese",
+        "§6 横向对标 includes specifically manus.im AND coze.cn (no auto-suggest)",
+        "§6 includes form_comparison_table + capability_comparison_table + score_table + insights",
+        "Test points M1-M11 (multi-agent specific) executed",
+        "20+ screenshots",
+        "Report length: 5000-8000 words"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ai-tool-deep-with-benchmark",
+      "prompt": "深度评测 https://perplexity.ai，AI 工具模板，跑标准基准 prompt 看产出质量",
+      "expected_behavior": [
+        "Skill picks ai-tool template",
+        "Skill picks deep depth tier",
+        "Executes test point A4 (run sample task) with the default benchmark prompt",
+        "Captures task execution progression (multiple sequential screenshots)",
+        "Report evaluates: citation quality (real vs fake), artifact format, completion UX",
+        "§6 横向对标 auto-suggests AI tool competitors (e.g., ChatGPT, Claude.ai, Genspark)",
+        "Report length: 10000-15000 words"
+      ],
+      "files": []
+    }
+  ]
+}
