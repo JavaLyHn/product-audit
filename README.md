@@ -5,7 +5,7 @@
 [![Skill Version](https://img.shields.io/badge/skill-v1.16-blue.svg)]()
 [![Python](https://img.shields.io/badge/python-3.9+-green.svg)]()
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-orange.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)]()
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
 ---
 
@@ -458,7 +458,7 @@ product-audit/
 
 ## 📄 License
 
-MIT License — 自由使用 / 修改 / 二次发行 / 商业使用，不附带任何形式的担保。
+GNU General Public License v3.0（GPL-3.0）— 可自由使用 / 修改 / 二次发行（含商业用途）；**衍生作品须同样以 GPL-3.0 开源**，不附带任何形式的担保。详见 [`LICENSE`](LICENSE)。
 
 ---
 
